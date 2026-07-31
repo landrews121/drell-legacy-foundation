@@ -1,183 +1,190 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="The Drell Legacy Foundation continues the generosity, leadership, and community spirit of Juandrell 'Drell' Lewis." />
-  <title>The Drell Legacy Foundation</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Drell Legacy Foundation | Detroit, Michigan</title>
+  <meta name="description" content="The Drell Legacy Foundation honors Juandrell “Drell” Lewis through youth support, community outreach, and service in Detroit, Michigan.">
+  <meta name="theme-color" content="#081f3d">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="The Drell Legacy Foundation">
+  <meta property="og:description" content="Continuing the Legacy. Serving the Community. Join our 2026 Back-to-School Drive in Detroit.">
+  <meta property="og:image" content="assets/back-to-school-drive-2026.png">
+  <meta property="og:image:alt" content="The Drell Legacy Foundation 2026 Back-to-School Drive flyer">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NonprofitOrganization",
+    "name": "The Drell Legacy Foundation",
+    "description": "A Detroit foundation honoring Juandrell ‘Drell’ Lewis through community service and youth support.",
+    "email": "drelllegacyfoundation@gmail.com",
+    "telephone": "+1-313-694-6963",
+    "areaServed": {"@type": "City", "name": "Detroit"},
+    "address": {"@type": "PostalAddress", "addressLocality": "Detroit", "addressRegion": "MI", "addressCountry": "US"}
+  }
+  </script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to main content</a>
   <header class="site-header">
     <div class="container nav-wrap">
-      <a class="brand" href="#home" aria-label="The Drell Legacy Foundation home">
-        <span class="brand-mark">DL</span>
-        <span class="brand-text">
-          <strong>The Drell Legacy</strong>
-          <small>Foundation</small>
-        </span>
+      <a class="brand" href="#home" aria-label="The Drell Legacy Foundation — home">
+        <span class="brand-mark" aria-hidden="true">DL</span>
+        <span class="brand-text"><strong>The Drell Legacy</strong><small>Foundation</small></span>
       </a>
-      <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
-      <nav class="nav-links">
-        <a href="#about">About</a>
-        <a href="#programs">What We Do</a>
-        <a href="#event">Back-to-School Drive</a>
-        <a href="#contact">Contact</a>
-        <a class="btn btn-small" href="#support">Support Us</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="sr-only">Open navigation</span><span class="menu-icon" aria-hidden="true"></span>
+      </button>
+      <nav id="site-nav" class="nav-links" aria-label="Primary navigation">
+        <a href="#home">Home</a><a href="#about">About</a><a href="#work">Our Work</a>
+        <a href="#event">Event</a><a href="#volunteer">Volunteer</a><a href="#support">Support</a><a href="#contact">Contact</a>
       </nav>
     </div>
   </header>
 
-  <main>
+  <main id="main">
     <section id="home" class="hero">
+      <div class="hero-glow" aria-hidden="true"></div>
       <div class="container hero-grid">
-        <div>
-          <p class="eyebrow">In honor of Juandrell “Drell” Lewis</p>
-          <h1>Continuing the Legacy.<br><span>Serving the Community.</span></h1>
-          <p class="hero-copy">
-            The Drell Legacy Foundation carries forward Drell’s generosity, leadership,
-            and commitment to uplifting youth, families, and communities.
-          </p>
-          <div class="hero-actions">
-            <a class="btn" href="#event">View Upcoming Drive</a>
-            <a class="btn btn-outline" href="#support">Ways to Help</a>
+        <div class="hero-content">
+          <p class="eyebrow light">In honor of Juandrell “Drell” Lewis</p>
+          <h1><span>The Drell Legacy</span> Foundation</h1>
+          <p class="motto">Continuing the Legacy. <em>Serving the Community.</em></p>
+          <p class="hero-copy">Rooted in Detroit, we carry forward a spirit of generosity, leadership, and compassion by uplifting youth, supporting families, and bringing neighbors together through service.</p>
+          <div class="button-row">
+            <a class="button" href="#event">Explore the Back-to-School Drive</a>
+            <a class="button button-outline" href="#volunteer">Volunteer with us</a>
           </div>
         </div>
-        <div class="hero-card" aria-label="Foundation mission">
-          <div class="heart">♡</div>
-          <p class="mission-label">Our Mission</p>
-          <p>
-            To ensure that the generosity, leadership, and community spirit of
-            Juandrell “Drell” Lewis continues to inspire and uplift future generations.
-          </p>
-        </div>
+        <aside class="hero-note" aria-label="Upcoming event summary">
+          <span class="note-kicker">Coming this August</span>
+          <span class="date-block"><strong>15</strong><span>August<br>2026</span></span>
+          <h2>Back-to-School Drive</h2>
+          <p>Free supplies, food, activities, and resources for our Detroit community.</p>
+          <a href="#event" class="text-link">View event details <span aria-hidden="true">→</span></a>
+        </aside>
       </div>
+      <div class="hero-rule" aria-hidden="true"></div>
     </section>
 
-    <section id="about" class="section">
-      <div class="container two-col">
-        <div>
+    <section id="about" class="section about-section">
+      <div class="container split">
+        <div class="section-heading">
           <p class="eyebrow">About the Foundation</p>
-          <h2>A legacy built through service</h2>
+          <h2>A legacy that lives through service.</h2>
         </div>
-        <div>
-          <p>
-            The Drell Legacy Foundation was created to honor the life and impact of
-            Juandrell “Drell” Lewis by continuing the work he cared deeply about.
-            Through education, outreach, mentorship, and community service, we are
-            committed to helping future generations thrive.
-          </p>
+        <div class="prose lead-prose">
+          <p>The Drell Legacy Foundation was created to carry forward the generosity, leadership, compassion, and dedication to serving others embodied by Juandrell “Drell” Lewis.</p>
+          <p>We honor that spirit by creating meaningful opportunities to give, connect, and help our community thrive—one student, one family, and one act of service at a time.</p>
         </div>
       </div>
     </section>
 
-    <section id="programs" class="section section-alt">
+    <section id="mission" class="mission-band" aria-labelledby="mission-title">
+      <div class="container mission-inner">
+        <span class="monogram" aria-hidden="true">DL</span>
+        <div><p class="eyebrow light">Our Mission</p><h2 id="mission-title">“To ensure that the generosity, leadership, and community spirit of Juandrell ‘Drell’ Lewis continues to inspire and uplift future generations.”</h2></div>
+      </div>
+    </section>
+
+    <section id="legacy" class="section legacy-section">
+      <div class="container legacy-grid">
+        <div class="legacy-art" aria-hidden="true"><span>Legacy</span><i></i><b>Service with heart.<br>Purpose in action.</b></div>
+        <div class="legacy-copy">
+          <p class="eyebrow">Drell’s Legacy</p>
+          <h2>Turning remembrance into meaningful action.</h2>
+          <p>Drell’s spirit of generosity and care is the heart of this Foundation. Every gathering, partnership, and initiative is intended to extend that spirit into the future.</p>
+          <p>We believe a legacy grows strongest when a community carries it together—showing up for young people, meeting neighbors with compassion, and making service a lasting tradition.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" class="section work-section">
       <div class="container">
-        <p class="eyebrow center">What We Do</p>
-        <h2 class="center">Creating opportunities. Strengthening community.</h2>
-        <div class="cards">
-          <article class="card">
-            <div class="icon">🎒</div>
-            <h3>Youth Support & Education</h3>
-            <p>School supplies, backpacks, educational resources, and youth-focused support.</p>
-          </article>
-          <article class="card">
-            <div class="icon">🤝</div>
-            <h3>Community Outreach</h3>
-            <p>Service projects and partnerships that meet real needs in the community.</p>
-          </article>
-          <article class="card">
-            <div class="icon">📚</div>
-            <h3>Mentorship & Enrichment</h3>
-            <p>Programs that encourage confidence, leadership, learning, and personal growth.</p>
-          </article>
-          <article class="card">
-            <div class="icon">❤️</div>
-            <h3>Legacy Initiatives</h3>
-            <p>Annual events and charitable efforts that keep Drell’s spirit of giving alive.</p>
-          </article>
+        <div class="heading-row"><div><p class="eyebrow">Programs &amp; Initiatives</p><h2>Building a stronger community, together.</h2></div><p>Our work centers on practical care, connection, and opportunity for Detroit youth and families.</p></div>
+        <div class="program-grid">
+          <article class="program-card featured"><span class="card-number">01</span><h3>Annual Back-to-School Drive</h3><p>Backpacks, supplies, food, activities, and resources that help students begin the school year ready.</p><a href="#event">See the 2026 event <span aria-hidden="true">→</span></a></article>
+          <article class="program-card"><span class="card-number">02</span><h3>Youth Support &amp; Education</h3><p>Resources and encouragement designed to help young people learn, grow, and feel supported.</p></article>
+          <article class="program-card"><span class="card-number">03</span><h3>Community Outreach</h3><p>Responsive outreach and partnerships that connect neighbors with useful community resources.</p></article>
+          <article class="program-card"><span class="card-number">04</span><h3>Mentorship &amp; Enrichment</h3><p>Opportunities intended to encourage confidence, leadership, learning, and personal growth.</p></article>
+          <article class="program-card"><span class="card-number">05</span><h3>Service Initiatives</h3><p>Hands-on efforts that bring volunteers and partners together around meaningful local needs.</p></article>
+          <article class="program-card future"><span class="status">Future goal</span><span class="card-number">06</span><h3>Scholarship Opportunities</h3><p>A future goal to expand educational opportunity as the Foundation grows its reach and capacity.</p></article>
         </div>
       </div>
     </section>
 
     <section id="event" class="section event-section">
       <div class="container event-grid">
-        <div>
-          <p class="eyebrow">Upcoming Event</p>
-          <h2>Back-to-School Drive 2026</h2>
-          <div class="event-details">
-            <p><strong>Date:</strong> Saturday, August 15, 2026</p>
-            <p><strong>Time:</strong> 2:00 PM – 4:30 PM</p>
-            <p><strong>Location:</strong> Manolo’s Park</p>
-            <p>3901 Chrysler Drive, Detroit, MI 48201</p>
-          </div>
-          <p>
-            Join us for free backpacks, school supplies, music, food, games,
-            activities, and community resources as we help students begin the
-            school year prepared and confident.
-          </p>
-          <a class="btn" href="#contact">Contact Us</a>
-        </div>
-        <div class="flyer-wrap">
-          <img src="assets/back-to-school-drive-2026.png" alt="The Drell Legacy Foundation Back-to-School Drive flyer" />
+        <div class="flyer-frame"><img src="assets/back-to-school-drive-2026.png" alt="Flyer for The Drell Legacy Foundation Back-to-School Drive on August 15, 2026" width="1054" height="1492" loading="lazy"><span>Official event flyer</span></div>
+        <div class="event-copy">
+          <p class="eyebrow light">Featured Community Event</p>
+          <h2>The Drell Legacy Foundation Back-to-School Drive</h2>
+          <p class="event-intro">A free afternoon of school-year essentials, family fun, and community connection.</p>
+          <dl class="event-facts">
+            <div><dt>Date</dt><dd>Saturday, August 15, 2026</dd></div>
+            <div><dt>Time</dt><dd>2:00 PM–4:30 PM</dd></div>
+            <div><dt>Location</dt><dd>Manolo’s Park<br><span>3901 Chrysler Drive, Detroit, MI 48201</span></dd></div>
+          </dl>
+          <h3>What you’ll find</h3>
+          <ul class="feature-list"><li>Free backpacks</li><li>School supplies</li><li>Food</li><li>Music</li><li>Games and activities</li><li>Community resources</li></ul>
+          <a class="button" href="https://www.google.com/maps/dir/?api=1&amp;destination=3901+Chrysler+Drive%2C+Detroit%2C+MI+48201" target="_blank" rel="noopener">Get directions <span class="sr-only">(opens in a new tab)</span></a>
         </div>
       </div>
     </section>
 
-    <section id="support" class="section section-alt">
+    <section id="support" class="section support-section">
       <div class="container">
-        <p class="eyebrow center">Support the Mission</p>
-        <h2 class="center">Help us continue Drell’s work</h2>
-        <div class="support-grid">
-          <div class="support-box">
-            <h3>Donate Supplies</h3>
-            <p>Contribute new backpacks, notebooks, folders, pencils, crayons, markers, and other school essentials.</p>
-          </div>
-          <div class="support-box">
-            <h3>Volunteer</h3>
-            <p>Help with collections, event setup, distribution, outreach, or community partnerships.</p>
-          </div>
-          <div class="support-box">
-            <h3>Become a Sponsor</h3>
-            <p>Businesses and organizations can support programs through products, services, or financial contributions.</p>
-          </div>
+        <p class="eyebrow">Ways to Help</p><h2>Your support becomes community impact.</h2>
+        <div class="help-grid">
+          <article class="help-card"><span class="line-icon supplies" aria-hidden="true"></span><h3>Donate School Supplies</h3><p>Help students start prepared with new backpacks, notebooks, folders, pens, pencils, crayons, markers, glue sticks, rulers, erasers, and loose-leaf paper.</p><a class="text-link" href="mailto:drelllegacyfoundation@gmail.com?subject=School%20Supply%20Donation%20%E2%80%93%20The%20Drell%20Legacy%20Foundation">Arrange a supply donation <span aria-hidden="true">→</span></a></article>
+          <article class="help-card" id="volunteer"><span class="line-icon hands" aria-hidden="true"></span><h3>Volunteer</h3><p>Share your time at collections, event setup, distribution, outreach, or future community initiatives.</p><a class="text-link" href="mailto:drelllegacyfoundation@gmail.com?subject=Volunteer%20Interest%20%E2%80%93%20The%20Drell%20Legacy%20Foundation">Tell us you’re interested <span aria-hidden="true">→</span></a></article>
+          <article class="help-card" id="sponsor"><span class="line-icon partner" aria-hidden="true"></span><h3>Sponsor the Foundation</h3><p>Businesses and organizations can strengthen our work through products, services, partnerships, or financial support.</p><a class="text-link" href="mailto:drelllegacyfoundation@gmail.com?subject=Sponsorship%20Interest%20%E2%80%93%20The%20Drell%20Legacy%20Foundation">Start a sponsorship conversation <span aria-hidden="true">→</span></a></article>
         </div>
-        <p class="notice">
-          Tax-deductibility depends on the Foundation’s current federal 501(c)(3) status.
-          Contact us before making a financial contribution if you need a tax receipt.
-        </p>
+        <p class="financial-notice"><strong>Financial contribution notice:</strong> The Drell Legacy Foundation is currently completing its organizational and tax-exempt setup. Please contact us regarding the current tax treatment of financial contributions.</p>
+      </div>
+    </section>
+
+    <section class="sponsor-banner" aria-labelledby="sponsor-title">
+      <div class="container sponsor-inner"><div><p class="eyebrow light">Community Partners</p><h2 id="sponsor-title">Let’s build something lasting.</h2><p>We welcome conversations with local businesses, organizations, and community leaders who share our commitment to Detroit’s young people and families.</p></div><a class="button" href="mailto:drelllegacyfoundation@gmail.com?subject=Sponsorship%20Interest%20%E2%80%93%20The%20Drell%20Legacy%20Foundation">Become a sponsor</a></div>
+    </section>
+
+    <section id="gallery" class="section gallery-section">
+      <div class="container">
+        <div class="heading-row"><div><p class="eyebrow">Community in Focus</p><h2>Moments of service, coming soon.</h2></div><p>Future Foundation and Back-to-School Drive photos will be shared here as our story grows.</p></div>
+        <div class="gallery-grid" aria-label="Photo gallery placeholders">
+          <div class="gallery-placeholder large"><span>Foundation moments</span><small>Photo coming soon</small></div>
+          <div class="gallery-placeholder"><span>Community service</span><small>Photo coming soon</small></div>
+          <div class="gallery-placeholder"><span>Back-to-School Drive</span><small>Photo coming soon</small></div>
+        </div>
+        <p class="gallery-note">These are clearly marked placeholders and do not depict Drell or actual Foundation events.</p>
       </div>
     </section>
 
     <section id="contact" class="section contact-section">
       <div class="container contact-grid">
-        <div>
-          <p class="eyebrow">Get Involved</p>
-          <h2>Let’s continue the legacy together.</h2>
-          <p>Reach out to volunteer, donate, sponsor an event, or learn more about the Foundation.</p>
+        <div class="contact-copy"><p class="eyebrow light">Contact Us</p><h2>Let’s continue the legacy together.</h2><p>Have a question, an idea, or a desire to help? We would be glad to hear from you.</p>
+          <address><a href="tel:+13136946963">313-694-6963</a><a href="mailto:drelllegacyfoundation@gmail.com">drelllegacyfoundation@gmail.com</a><span>Serving Detroit, Michigan</span></address>
         </div>
-        <div class="contact-card">
-          <p><strong>Phone:</strong> <a href="tel:+13136946963">313-694-6963</a></p>
-          <p><strong>Email:</strong> <a href="mailto:drelllegacyfoundation@gmail.com">drelllegacyfoundation@gmail.com</a></p>
-          <p><strong>Location:</strong> Detroit, Michigan</p>
-        </div>
+        <form id="contact-form" class="contact-form">
+          <div class="field-row"><label>Name <input name="name" autocomplete="name" required></label><label>Email <input type="email" name="email" autocomplete="email" required></label></div>
+          <div class="field-row"><label>Phone <span>(optional)</span><input type="tel" name="phone" autocomplete="tel"></label><label>Subject <input name="subject" required></label></div>
+          <label>Message <textarea name="message" rows="5" required></textarea></label>
+          <button class="button" type="submit">Open email to send</button>
+          <p class="form-note">Submitting opens your email app with this message addressed to the Foundation. No information is stored by this website.</p>
+        </form>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="container footer-wrap">
-      <div>
-        <strong>The Drell Legacy Foundation</strong>
-        <p>Continuing the Legacy. Serving the Community.</p>
-      </div>
-      <p>© <span id="year"></span> The Drell Legacy Foundation</p>
-    </div>
+    <div class="container footer-top"><a class="brand footer-brand" href="#home"><span class="brand-mark" aria-hidden="true">DL</span><span class="brand-text"><strong>The Drell Legacy</strong><small>Foundation</small></span></a><p>Continuing the Legacy.<br>Serving the Community.</p><nav aria-label="Footer navigation"><a href="#about">About</a><a href="#work">Our Work</a><a href="#event">Event</a><a href="#contact">Contact</a></nav></div>
+    <div class="container footer-bottom"><p>© <span id="year"></span> The Drell Legacy Foundation. All rights reserved.</p><p>Detroit, Michigan</p></div>
   </footer>
-
   <script src="script.js"></script>
 </body>
 </html>
