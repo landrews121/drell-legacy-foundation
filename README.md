@@ -1,23 +1,36 @@
 # The Drell Legacy Foundation Website
 
-Official single-page website for **The Drell Legacy Foundation**, a Detroit-based organization founded in honor of Juandrell “Drell” Lewis.
+Official website for **The Drell Legacy Foundation**, serving Detroit, Michigan in honor of Juandrell “Drell” Lewis.
 
-## Site overview
+> **Mission:** “To ensure that the generosity, leadership, and community spirit of Juandrell ‘Drell’ Lewis continues to inspire and uplift future generations.”
 
-This repository is a plain static site built with semantic HTML, responsive CSS, and a small amount of vanilla JavaScript. It has no build step, server, database, or payment integration and is ready to publish with GitHub Pages.
+## Website overview
 
-### Files
+This is a lightweight, single-page static website built with semantic HTML, responsive CSS, and dependency-free JavaScript. It is hosted free through GitHub Pages at [thedrelllegacyfoundation.org](https://thedrelllegacyfoundation.org/). It has no build step, database, analytics, payment processor, or server-side form handler.
 
-- `index.html` — site content, metadata, and structured data
-- `styles.css` — mobile-first layout and visual design
-- `script.js` — responsive navigation, mailto contact form, and dynamic footer year
-- `assets/back-to-school-drive-2026.png` — official event flyer
-- `assets/favicon.svg` — site icon
-- `.nojekyll` — tells GitHub Pages to serve the static files directly
+## Organization information
 
-## Review locally
+- **Service area:** Detroit, Michigan
+- **Phone:** [313-694-6963](tel:+13136946963)
+- **Email:** [drelllegacyfoundation@gmail.com](mailto:drelllegacyfoundation@gmail.com)
+- **Motto:** “Continuing the Legacy. Serving the Community.”
 
-From the repository root, start a local web server:
+## File structure
+
+| Path | Purpose |
+| --- | --- |
+| `index.html` | Page content, metadata, and structured data |
+| `styles.css` | Mobile-first design and responsive layouts |
+| `script.js` | Mobile navigation, event countdown, email contact flow, and footer year |
+| `assets/back-to-school-drive-2026.png` | Approved 2026 event flyer |
+| `assets/favicon.svg` | Branded browser icon |
+| `CNAME` | Maps GitHub Pages to `thedrelllegacyfoundation.org` |
+| `.nojekyll` | Serves the static files without Jekyll processing |
+| `.github/workflows/deploy-pages.yml` | Deploys `main` to GitHub Pages |
+
+## Preview locally
+
+From the repository root:
 
 ```bash
 python3 -m http.server 8000
