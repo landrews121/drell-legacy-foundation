@@ -21,7 +21,7 @@ This is a lightweight, single-page static website built with semantic HTML, resp
 | --- | --- |
 | `index.html` | Page content, metadata, and structured data |
 | `styles.css` | Mobile-first design and responsive layouts |
-| `script.js` | Mobile navigation, event countdown, email contact flow, and footer year |
+| `script.js` | Mobile navigation, gallery lightbox, email contact flow, and footer year |
 | `assets/back-to-school-drive-2026.png` | Approved 2026 event flyer |
 | `assets/favicon.svg` | Branded browser icon |
 | `CNAME` | Maps GitHub Pages to `thedrelllegacyfoundation.org` |
@@ -56,9 +56,15 @@ https://<github-username>.github.io/<repository-name>/
 
 If this repository is named `<github-username>.github.io`, the URL is instead `https://<github-username>.github.io/`.
 
-## Connect a custom domain later
+## Custom domain
 
-No custom domain is currently configured. When one is available:
+The custom domain is configured through `CNAME`:
+
+```text
+thedrelllegacyfoundation.org
+```
+
+If the domain needs to be changed later:
 
 1. Add the domain under **Settings → Pages → Custom domain** and save it.
 2. At the domain registrar, add the DNS records GitHub displays. A `www` subdomain typically uses a CNAME pointing to `<github-username>.github.io`; an apex domain uses GitHub Pages A/AAAA records.
@@ -69,7 +75,7 @@ Refer to [GitHub's custom domain documentation](https://docs.github.com/en/pages
 
 ## Content and operational notes
 
-- Update gallery placeholders only with approved Foundation photography and accurate alt text.
+- Update Back-to-School Drive gallery photos only with approved Foundation photography and accurate alt text.
 - The site does not claim financial contributions are tax-deductible and does not accept online payments.
 - Confirm the Foundation's organizational status before changing the financial contribution notice.
 - Keep the contact phone number, email address, and event details current in `index.html`.
