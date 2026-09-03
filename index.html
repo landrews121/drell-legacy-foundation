@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>The Drell Legacy Foundation | Detroit, Michigan</title>
-  <meta name="description" content="The Drell Legacy Foundation honors Juandrell “Drell” Lewis through youth support, community outreach, and service in Detroit, Michigan.">
+  <title>$150 Foot Locker Giveaway | The Drell Legacy Foundation</title>
+  <meta name="description" content="Nominate a deserving student for The Drell Legacy Foundation’s $150 Foot Locker Back-to-School Giveaway.">
   <meta name="theme-color" content="#081f3d">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="The Drell Legacy Foundation">
-  <meta property="og:description" content="Continuing the Legacy. Serving the Community. See the 2026 Back-to-School Drive recap from Detroit.">
+  <meta property="og:title" content="$150 Foot Locker Giveaway | The Drell Legacy Foundation">
+  <meta property="og:description" content="Nominate a deserving student for The Drell Legacy Foundation’s $150 Foot Locker Back-to-School Giveaway.">
   <meta property="og:image" content="assets/IMG_3243.jpg">
   <meta property="og:image:alt" content="Portrait used as the main hero image for The Drell Legacy Foundation">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
@@ -41,7 +41,7 @@
         <span class="sr-only">Open navigation</span><span class="menu-icon" aria-hidden="true"></span>
       </button>
       <nav id="site-nav" class="nav-links" aria-label="Primary navigation">
-        <a href="#home">Home</a><a href="#about">About</a><a href="#work">Our Work</a>
+        <a href="#home">Home</a><a href="#giveaway">Giveaway</a><a href="#about">About</a><a href="#work">Our Work</a>
         <a href="#event">Event</a><a href="#volunteer">Volunteer</a><a href="#support">Support</a><a href="#contact">Contact</a>
       </nav>
     </div>
@@ -70,6 +70,94 @@
         </aside>
       </div>
       <div class="hero-rule" aria-hidden="true"></div>
+    </section>
+
+    <section class="giveaway-promo" aria-labelledby="giveaway-promo-title">
+      <div class="container giveaway-promo-card">
+        <div>
+          <p class="eyebrow">New Community Giveaway</p>
+          <h2 id="giveaway-promo-title">$150 Foot Locker Giveaway</h2>
+          <p>Know a deserving student who could use a little extra support? Nominate them today.</p>
+        </div>
+        <a class="button" href="#giveaway">Enter now</a>
+      </div>
+    </section>
+
+    <section id="giveaway" class="section giveaway-section" aria-labelledby="giveaway-title">
+      <div class="container giveaway-grid">
+        <div class="giveaway-intro">
+          <p class="eyebrow light">We’re not done yet!</p>
+          <h2 id="giveaway-title">$150 Foot Locker Back-to-School Giveaway</h2>
+          <p class="giveaway-lead">Thanks to a generous donation, The Drell Legacy Foundation is giving $150 in Foot Locker gift cards to a student in need.</p>
+          <p>Thanks to a generous donation, The Drell Legacy Foundation is giving one deserving student $150 in Foot Locker gift cards. If you know a young person who could use a little extra support, submit a nomination below.</p>
+          <p class="giveaway-website-note">Entries are accepted only through TheDrellLegacyFoundation.org.</p>
+          <div class="giveaway-stats" aria-label="Giveaway summary">
+            <span>One Student</span><span>$150</span><span>One Winner</span>
+          </div>
+          <a class="button" href="#giveaway-form">Nominate a student</a>
+          <div class="selection-note">
+            <h3>How selection works</h3>
+            <p>Entries will be reviewed privately by The Drell Legacy Foundation. One recipient will be selected based on the information submitted. Social media likes, shares, comments, and follower counts will not determine the winner.</p>
+          </div>
+        </div>
+
+        <form id="giveaway-form" class="giveaway-form" action="REPLACE_WITH_FORMSPREE_ENDPOINT" method="POST" novalidate>
+          <!-- REPLACE_WITH_FORMSPREE_ENDPOINT: Insert the live Formspree endpoint in the action attribute before launching entries. -->
+          <div class="form-header">
+            <p class="eyebrow">Enter the Giveaway</p>
+            <h3>Parent/guardian nomination form</h3>
+            <p>Please use parent or guardian contact information. Do not enter a child’s email address or phone number.</p>
+          </div>
+          <div id="giveaway-form-message" class="form-alert" role="status" aria-live="polite"></div>
+          <div class="field-row">
+            <label>Parent/guardian full name <input name="guardian_name" autocomplete="name" required minlength="2" maxlength="90"></label>
+            <label>Parent/guardian email <input type="email" name="guardian_email" autocomplete="email" required maxlength="120"></label>
+          </div>
+          <div class="field-row">
+            <label>Parent/guardian phone number <input type="tel" name="guardian_phone" autocomplete="tel" required pattern="[0-9+().\-\s]{7,20}" maxlength="20"></label>
+            <label>City <input name="city" autocomplete="address-level2" required maxlength="80"></label>
+          </div>
+          <div class="field-row">
+            <label>Student first name <input name="student_first_name" autocomplete="off" required minlength="1" maxlength="60"></label>
+            <label>Student age <input type="number" name="student_age" required min="4" max="20" inputmode="numeric"></label>
+          </div>
+          <label>Student grade <input name="student_grade" required maxlength="40"></label>
+          <label>Why are you nominating this student? <textarea name="nomination_reason" rows="5" required minlength="25" maxlength="1000"></textarea></label>
+          <label>Is there anything else you would like us to know? <textarea name="additional_info" rows="3" maxlength="700"></textarea></label>
+
+          <fieldset class="consent-group">
+            <legend>Required acknowledgments</legend>
+            <label><input type="checkbox" name="guardian_permission" required> I am the parent/legal guardian of this student OR I have permission from the parent/legal guardian to submit this nomination.</label>
+            <label><input type="checkbox" name="selection_acknowledgment" required> I understand that submitting an entry does not guarantee selection.</label>
+            <label><input type="checkbox" name="rules_agreement" required> I have read and agree to the giveaway rules.</label>
+            <label><input type="checkbox" name="contact_consent" required> I consent to The Drell Legacy Foundation contacting me regarding this giveaway.</label>
+          </fieldset>
+
+          <button class="button" type="submit">Enter the giveaway</button>
+          <p class="form-note">Information submitted through this form will be used only to review giveaway entries, contact applicants, and administer this giveaway. The Drell Legacy Foundation will not publicly share a child’s personal information or nomination story without appropriate permission.</p>
+        </form>
+      </div>
+
+      <div class="container rules-wrap">
+        <details class="rules-card">
+          <summary>Official Giveaway Rules</summary>
+          <ul>
+            <li>No purchase or donation necessary.</li>
+            <li>Approximate retail value: $150.</li>
+            <li>One recipient will receive $150 in Foot Locker gift cards.</li>
+            <li>Parent or guardian participation is required for minors.</li>
+            <li>Only one entry per student.</li>
+            <li>Entries must be truthful and complete.</li>
+            <li>The Foundation may disqualify duplicate, fraudulent, or incomplete entries.</li>
+            <li>The recipient will be contacted using the parent/guardian information provided.</li>
+            <li>If the selected recipient cannot be reached within a reasonable period, the Foundation may select another recipient.</li>
+            <li>Gift cards are not redeemable for cash through the Foundation.</li>
+            <li>The giveaway is not sponsored, endorsed, administered by, or associated with Foot Locker, Facebook/Meta, or Instagram.</li>
+            <li>Participation does not create any tax-deductible donation or purchase requirement.</li>
+            <li>The Foundation reserves the right to modify or cancel the giveaway if circumstances require it.</li>
+          </ul>
+        </details>
+      </div>
     </section>
 
     <section id="about" class="section about-section">
@@ -194,7 +282,7 @@
   </main>
 
   <footer>
-    <div class="container footer-top"><a class="brand footer-brand" href="#home"><span class="brand-mark" aria-hidden="true">DL</span><span class="brand-text"><strong>The Drell Legacy</strong><small>Foundation</small></span></a><p>Continuing the Legacy.<br>Serving the Community.</p><nav aria-label="Footer navigation"><a href="#about">About</a><a href="#work">Our Work</a><a href="#event">Event</a><a href="#contact">Contact</a></nav></div>
+    <div class="container footer-top"><a class="brand footer-brand" href="#home"><span class="brand-mark" aria-hidden="true">DL</span><span class="brand-text"><strong>The Drell Legacy</strong><small>Foundation</small></span></a><p>Continuing the Legacy.<br>Serving the Community.</p><nav aria-label="Footer navigation"><a href="#giveaway">Giveaway</a><a href="#about">About</a><a href="#work">Our Work</a><a href="#event">Event</a><a href="#contact">Contact</a></nav></div>
     <div class="container footer-bottom"><p>© <span id="year"></span> The Drell Legacy Foundation. All rights reserved.</p><p>Detroit, Michigan</p></div>
   </footer>
   <div class="lightbox" id="gallery-lightbox" hidden>
