@@ -22,6 +22,7 @@ This is a lightweight, single-page static website built with semantic HTML, resp
 | `index.html` | Page content, metadata, and structured data |
 | `styles.css` | Mobile-first design and responsive layouts |
 | `script.js` | Mobile navigation, gallery lightbox, email contact flow, and footer year |
+| Giveaway form | Located in `index.html` under the `#giveaway` section |
 | `assets/back-to-school-drive-2026.png` | Approved 2026 event flyer |
 | `assets/favicon.svg` | Branded browser icon |
 | `CNAME` | Maps GitHub Pages to `thedrelllegacyfoundation.org` |
@@ -37,6 +38,34 @@ python3 -m http.server 8000
 ```
 
 Then open <http://localhost:8000> and check the site at mobile, tablet, and desktop widths. The contact form intentionally opens the visitor's configured email application; GitHub Pages cannot process form submissions on its own.
+
+## Configure the Foot Locker giveaway form
+
+The giveaway form is ready for a static form provider such as Formspree, but it will not accept entries until a real endpoint is added.
+
+1. Create or open the Formspree form that should receive giveaway nominations.
+2. Copy the Formspree endpoint. It should look similar to `https://formspree.io/f/yourformid`.
+3. Open `index.html`.
+4. Find the giveaway form:
+
+```html
+<form id="giveaway-form" class="giveaway-form" action="REPLACE_WITH_FORMSPREE_ENDPOINT" method="POST" novalidate>
+```
+
+5. Replace only `REPLACE_WITH_FORMSPREE_ENDPOINT` with the live Formspree endpoint.
+6. Test the form with a complete entry before sharing the giveaway publicly.
+
+If the placeholder is still present, the website shows a setup message and does not pretend the entry was submitted.
+
+## Manage the giveaway
+
+- To change the giveaway amount, update `$150` in the giveaway section of `index.html`, the official rules in `index.html`, and the SEO title/description near the top of `index.html`.
+- To change entry dates, add the accurate entry window language in the giveaway section and official rules in `index.html`. Do not add dates unless they are confirmed.
+- To close entries, replace the form area in `index.html` with a short closed message, or remove the Formspree endpoint and update the button text so visitors know entries are closed.
+- To update the confirmation message, edit the success text in `script.js` inside the giveaway form submission handler.
+- To remove the giveaway after it ends, remove the homepage giveaway promo, the `#giveaway` navigation link, the `#giveaway` section, the giveaway form JavaScript in `script.js`, and the giveaway-specific CSS at the bottom of `styles.css`.
+- Review the official giveaway rules before launch.
+- Do not publicly post applicant information, a child’s personal information, or nomination stories without appropriate permission.
 
 ## Publish with GitHub Pages
 
