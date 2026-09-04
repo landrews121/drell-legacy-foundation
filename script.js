@@ -38,6 +38,60 @@ document.getElementById('contact-form').addEventListener('submit', (event) => {
 
 document.getElementById('year').textContent = new Date().getFullYear();
 
+const giveawayForm = document.getElementById('giveaway-form');
+const giveawayMessage = document.getElementById('giveaway-form-message');
+const formspreePlaceholder = 'REPLACE_WITH_FORMSPREE_ENDPOINT';
+
+function showGiveawayMessage(message, type = 'error') {
+  giveawayMessage.textContent = message;
+  giveawayMessage.className = `form-alert is-visible is-${type}`;
+}
+
+function endpointIsConfigured(endpoint) {
+  return endpoint && !endpoint.includes(formspreePlaceholder) && /^https:\/\/formspree\.io\/f\/[a-z0-9]+$/i.test(endpoint);
+}
+
+giveawayForm.addEventListener('submit', async (event) => {
+  event.preventDefault();
+  giveawayMessage.className = 'form-alert';
+  giveawayMessage.textContent = '';
+
+  if (!giveawayForm.checkValidity()) {
+    showGiveawayMessage('Please complete all required fields, use a valid email and phone number, and confirm each required acknowledgment.');
+    giveawayForm.reportValidity();
+    return;
+  }
+
+  const reason = giveawayForm.elements.nomination_reason.value.trim();
+  const additionalInfo = giveawayForm.elements.additional_info.value.trim();
+
+  if (reason.length < 25 || reason.length > 1000 || additionalInfo.length > 700) {
+    showGiveawayMessage('Please keep your nomination response between 25 and 1,000 characters and any optional note under 700 characters.');
+    return;
+  }
+
+  const endpoint = giveawayForm.getAttribute('action');
+  if (!endpointIsConfigured(endpoint)) {
+    showGiveawayMessage('Giveaway entries are not open yet. The Foundation must connect the Formspree endpoint before this form can receive nominations.');
+    return;
+  }
+
+  try {
+    const response = await fetch(endpoint, {
+      method: 'POST',
+      body: new FormData(giveawayForm),
+      headers: { Accept: 'application/json' },
+    });
+
+    if (!response.ok) throw new Error('Submission failed');
+
+    giveawayForm.reset();
+    showGiveawayMessage('Thank you for your submission! Your nomination has been received. The Drell Legacy Foundation will review all eligible entries and contact the selected family directly.', 'success');
+  } catch {
+    showGiveawayMessage('We could not submit your nomination right now. Please try again or contact drelllegacyfoundation@gmail.com.');
+  }
+});
+
 const lightbox = document.getElementById('gallery-lightbox');
 const lightboxImage = lightbox.querySelector('img');
 const lightboxClose = lightbox.querySelector('.lightbox-close');
@@ -45,7 +99,7 @@ const lightboxClose = lightbox.querySelector('.lightbox-close');
 function closeLightbox() {
   lightbox.hidden = true;
   lightboxImage.removeAttribute('src');
-  lightboxImage.removeAttribute('alt');
+  lightboxImage.alt = 'Selected Back-to-School Drive photo';
 }
 
 document.querySelectorAll('.gallery-photo').forEach((button) => {
