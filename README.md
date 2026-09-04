@@ -39,23 +39,23 @@ python3 -m http.server 8000
 
 Then open <http://localhost:8000> and check the site at mobile, tablet, and desktop widths. The contact form intentionally opens the visitor's configured email application; GitHub Pages cannot process form submissions on its own.
 
-## Configure the Foot Locker giveaway form
+## Foot Locker giveaway form
 
-The giveaway form is ready for a static form provider such as Formspree, but it will not accept entries until a real endpoint is added.
+The giveaway form is connected to Formspree at:
 
-1. Create or open the Formspree form that should receive giveaway nominations.
-2. Copy the Formspree endpoint. It should look similar to `https://formspree.io/f/yourformid`.
-3. Open `index.html`.
-4. Find the giveaway form:
-
-```html
-<form id="giveaway-form" class="giveaway-form" action="REPLACE_WITH_FORMSPREE_ENDPOINT" method="POST" novalidate>
+```text
+https://formspree.io/f/xoeqlpea
 ```
 
-5. Replace only `REPLACE_WITH_FORMSPREE_ENDPOINT` with the live Formspree endpoint.
-6. Test the form with a complete entry before sharing the giveaway publicly.
+The form uses `POST`, sends parent/guardian and student nomination details to Formspree, sets the email subject to `New Drell Legacy Giveaway Nomination`, and treats the parent/guardian email as the reply-to value where supported.
 
-If the placeholder is still present, the website shows a setup message and does not pretend the entry was submitted.
+To change the Formspree endpoint later, open `index.html` and find the giveaway form:
+
+```html
+<form id="giveaway-form" class="giveaway-form" action="https://formspree.io/f/xoeqlpea" method="POST" novalidate>
+```
+
+Replace only the `action` URL with the new Formspree endpoint. Test the form with a complete entry before sharing any new endpoint publicly.
 
 ## Manage the giveaway
 

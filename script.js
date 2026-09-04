@@ -40,7 +40,6 @@ document.getElementById('year').textContent = new Date().getFullYear();
 
 const giveawayForm = document.getElementById('giveaway-form');
 const giveawayMessage = document.getElementById('giveaway-form-message');
-const formspreePlaceholder = 'REPLACE_WITH_FORMSPREE_ENDPOINT';
 
 function showGiveawayMessage(message, type = 'error') {
   giveawayMessage.textContent = message;
@@ -48,7 +47,7 @@ function showGiveawayMessage(message, type = 'error') {
 }
 
 function endpointIsConfigured(endpoint) {
-  return endpoint && !endpoint.includes(formspreePlaceholder) && /^https:\/\/formspree\.io\/f\/[a-z0-9]+$/i.test(endpoint);
+  return endpoint && /^https:\/\/formspree\.io\/f\/[a-z0-9]+$/i.test(endpoint);
 }
 
 giveawayForm.addEventListener('submit', async (event) => {
@@ -76,10 +75,13 @@ giveawayForm.addEventListener('submit', async (event) => {
     return;
   }
 
+  giveawayForm.elements._replyto.value = giveawayForm.elements.guardian_email.value.trim();
+  const formData = new FormData(giveawayForm);
+
   try {
     const response = await fetch(endpoint, {
       method: 'POST',
-      body: new FormData(giveawayForm),
+      body: formData,
       headers: { Accept: 'application/json' },
     });
 
